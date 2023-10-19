@@ -7,10 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IUserService, UserService>();
 
-//var connectionString = builder.Configuration.GetConnectionString("Portal") ?? "Data Source=Portal.db";
-builder.Services.AddDbContext<PortalDbContext>(options => options.UseInMemoryDatabase("PortalDb"));
+builder.Services.AddDbContext<PortalDbContext>(options =>
+{
+    var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+    options.UseSqlite($"Data Source={Path.Join(path, "WebMinRouteGroup.db")}");
+});
 
 var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+var db = scope.ServiceProvider.GetService<PortalDbContext>();
+db?.Database.MigrateAsync();
 
 app.MapGroup("/user").MapUserGroup().WithTags("User Endpoints");
 

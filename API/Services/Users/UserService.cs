@@ -1,4 +1,5 @@
 using API.Entites.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Services.Users;
 
@@ -9,18 +10,19 @@ public class UserService : IUserService
     public UserService(PortalDbContext dbContext) {
         _dbContext = dbContext;
     }
-    public Task Add(User user)
+    public async Task Add(User user)
     { 
-        throw new NotImplementedException();
+        await _dbContext.Users.AddAsync(user);
+        await _dbContext.SaveChangesAsync();
     }
 
-    public ValueTask<User?> Find(int Id)
+    public async ValueTask<User?> Find(int Id)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users.FindAsync(Id);
     }
 
-    public Task<List<User>> GetAll()
+    public async Task<List<User>> GetAll()
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users.ToListAsync();
     }
 }
