@@ -25,4 +25,17 @@ public class BasicTests : IClassFixture<WebApplicationFactory<Program>>
         response.EnsureSuccessStatusCode();
         response.Content.ReadAsStringAsync().Result.Should().Be("Hello World!");
     }
+
+        [Fact]
+    public async Task TestGetUsersEndpoint()
+    {
+        // Arrange
+        var client = _factory.CreateClient();
+
+        // Act
+        var response = await client.GetAsync("/user");
+
+        // Assert
+        response.EnsureSuccessStatusCode();
+    }
 }

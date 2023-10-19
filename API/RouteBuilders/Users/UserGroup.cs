@@ -6,11 +6,33 @@ namespace API.RouteBuilders.Users;
 
 public static class UserGroup {
     public static RouteGroupBuilder  MapUserGroup(this RouteGroupBuilder group) {
+        group.MapGet("/", GetAllUsers);
+        group.MapPost("/", CreateUser);
+        group.MapGet("/{id}", GetUser);
+
         return group;
     }
 
-    public static async Task<Results<Ok<User>, NotFound>> GetUser(int id, IUserService userService) {
+    public static async Task<Results<Ok<UserDto>, NotFound>> GetUser(int id, IUserService userService) {
         var user = await userService.Find(id);
-        return user != null ? TypedResults.Ok(user) : TypedResults.NotFound();
+        return user != null ? TypedResults.Ok(new UserDto(user)) : TypedResults.NotFound();
+    }
+
+    public static async Task<Ok<List<UserDto>>> GetAllUsers(IUserService userService) {
+        var users = await userService.GetAll();
+        return TypedResults.Ok(users.Select(x => new UserDto(x)).ToList());
+    }
+
+    public static async Task<Created<UserDto>> CreateUser(UserDto userDto, IUserService userService) {
+        User user = new User {
+            Email = userDto.Email,
+            FirstName = userDto.FirstName,
+            LastName = userDto.LastName,
+            role = userDto.role
+        };
+
+        await userService.Add(user);
+
+        return TypedResults.Created($"/user/{user.Id}", new UserDto(user));
     }
 }
