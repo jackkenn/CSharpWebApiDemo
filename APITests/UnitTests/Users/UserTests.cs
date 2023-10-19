@@ -23,6 +23,32 @@ public class UserTests {
         var result = await UserGroup.GetUser(expected.Id, userRepo.Object);
 
         //Assert
-        result.Result.Should().BeEquivalentTo(TypedResults.Ok(expected));
+        result.Result.Should().BeEquivalentTo(TypedResults.Ok(new UserDto(expected)));
+    }
+
+    [Fact]
+    public async Task GetUserReturnNotFoundIfNotExists() {
+        //Arrange
+        userRepo.Setup(repo => repo.Find(It.IsAny<int>())).ReturnsAsync((User?)null);
+        
+        //Act
+        var result = await UserGroup.GetUser(0, userRepo.Object);
+
+        //Assert
+        result.Result.Should().BeEquivalentTo(TypedResults.NotFound());
+    }
+
+        [Fact]
+    public async Task CreateAddsValidUser() {
+        //Arrange
+        List<User> users = new();
+        var expected = fixture.Create<UserDto>();
+        userRepo.Setup(repo => repo.Add(It.IsAny<User>())).Callback((User user) => users.Add(user));
+        
+        //Act
+        var result = await UserGroup.CreateUser(expected, userRepo.Object);
+
+        //Assert
+        expected.Should().BeEquivalentTo(new UserDto(users.FirstOrDefault()));
     }
 }

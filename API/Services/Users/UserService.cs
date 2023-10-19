@@ -10,7 +10,7 @@ public class UserService : IUserService
         _dbContext = dbContext;
     }
     public Task Add(User user)
-    {
+    { 
         throw new NotImplementedException();
     }
 
