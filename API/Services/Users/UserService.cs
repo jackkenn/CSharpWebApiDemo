@@ -4,9 +4,9 @@ namespace API.Services.Users;
 
 public class UserService : IUserService
 {
-    private readonly UserGroupDbContext _dbContext;
+    private readonly PortalDbContext _dbContext;
 
-    public UserService(UserGroupDbContext dbContext) {
+    public UserService(PortalDbContext dbContext) {
         _dbContext = dbContext;
     }
     public Task Add(User user)
