@@ -49,6 +49,6 @@ public class UserTests {
         var result = await UserGroup.CreateUser(expected, userRepo.Object);
 
         //Assert
-        expected.Should().BeEquivalentTo(new UserDto(users.FirstOrDefault()));
+        expected.Should().BeEquivalentTo(new UserDto(users.FirstOrDefault()!));
     }
 }

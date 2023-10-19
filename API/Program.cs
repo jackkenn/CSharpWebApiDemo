@@ -1,13 +1,14 @@
 using API;
 using API.RouteBuilders.Users;
 using API.Services.Users;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
-var connectionString = builder.Configuration.GetConnectionString("Portal") ?? "Data Source=Portal.db";
-builder.Services.AddSqlite<PortalDbContext>(connectionString);
+//var connectionString = builder.Configuration.GetConnectionString("Portal") ?? "Data Source=Portal.db";
+builder.Services.AddDbContext<PortalDbContext>(options => options.UseInMemoryDatabase("PortalDb"));
 
 var app = builder.Build();
 
