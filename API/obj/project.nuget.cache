@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GQ2LAkv9dU++h4IEkGuQdd6AMX0oHX2xY+RiUF/zDNAfQSq+GWg5ltWrMui8kv3MOmbJuM7TA/mIf8eFv5svSg==",
+  "dgSpecHash": "432GwBOP2tiepLRMLD4WXBWu4CB1Xek8dNwzf3E95YKCMGhy9Sh1wMR/yANOwn6nQE+RZGdjBgYI0PJvoWqbqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jack\\projs\\CSharpWebApiDemo\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,11 @@
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.12\\microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.12\\microsoft.entityframeworkcore.design.7.0.12.nupkg.sha512",
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.12\\microsoft.entityframeworkcore.inmemory.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.12\\microsoft.entityframeworkcore.relational.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.12\\microsoft.entityframeworkcore.sqlite.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.12\\microsoft.entityframeworkcore.sqlite.core.7.0.12.nupkg.sha512",
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.12\\microsoft.entityframeworkcore.tools.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

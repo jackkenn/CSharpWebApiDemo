@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oZdRQbhBO3vjgg48FpGaqU4qiEpkpg1jozZ4FXvXMuTOEBriHdFY8y6sQDNuoSStGliP0hdX1oiLb05y3fQTTg==",
+  "dgSpecHash": "nRwqd7AntGQ+AbUh2r5544z1oRKDG+xTN/rP0p5Z7wCP9+ssHIcI5vbfh+KppIdwrs4SkL82WiMTwvmbdYDlig==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jack\\projs\\CSharpWebApiDemo\\APITests\\APITests.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.12\\microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
+    "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.12\\microsoft.entityframeworkcore.inmemory.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.12\\microsoft.entityframeworkcore.relational.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.12\\microsoft.entityframeworkcore.sqlite.7.0.12.nupkg.sha512",
     "C:\\Users\\Jack\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.12\\microsoft.entityframeworkcore.sqlite.core.7.0.12.nupkg.sha512",
