@@ -13,7 +13,9 @@ export class AuthService {
       password: 'pass',
     },
   ];
+
   session: any;
+
   constructor(private router: Router) {
     let local: any = localStorage.getItem('session');
     if (local) {
@@ -37,6 +39,6 @@ export class AuthService {
   logout() {
     this.session = undefined;
     localStorage.removeItem('session');
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/login');
   }
 }
