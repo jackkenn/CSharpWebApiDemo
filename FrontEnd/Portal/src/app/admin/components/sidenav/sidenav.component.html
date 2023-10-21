@@ -1,7 +1,18 @@
 <mat-drawer-container>
     <mat-drawer mode="side" opened>
-        <div class="sidenav"><p>Logo</p></div>
-        <div class="sidenav"><button class="button" (click)="logout()" mat-button>Logout</button></div>
+        <div class="sidenav-wrapper">
+            <div class="sidenav">
+                <p>Logo</p>
+            </div>
+            <div class="sidenav-element"><button class="button" mat-button>+ New Request</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>Requests</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>Agencies</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>Case Managers</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>User?</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>Company Settings</button></div>
+            <div class="sidenav-element"><button class="button" mat-button>Protal FAQs</button></div>
+            <div class="sidenav-element"><button class="button" (click)="logout()" mat-button>Logout</button></div>
+        </div>
     </mat-drawer>
     <mat-drawer-content>
         <div class="main-content">

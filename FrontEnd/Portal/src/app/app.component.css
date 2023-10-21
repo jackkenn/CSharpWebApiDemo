@@ -1,0 +1,15 @@
+.button {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px 28px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 15px 40px 0 rgba(0,0,0,0.19);
+}
