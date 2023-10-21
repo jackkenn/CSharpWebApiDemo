@@ -1,0 +1,11 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened>
+        <div class="sidenav"><p>Logo</p></div>
+        <div class="sidenav"><button class="button" (click)="logout()" mat-button>Logout</button></div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="main-content">
+            <app-dashboard></app-dashboard>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
