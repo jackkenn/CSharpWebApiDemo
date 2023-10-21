@@ -1,0 +1,17 @@
+.sidenav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 150px;
+}
+
+.sidenav-element{
+    display: inline-block;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-content {
+    min-height: 90vh;
+}
+ 
