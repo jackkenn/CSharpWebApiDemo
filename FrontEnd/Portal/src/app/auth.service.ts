@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './User';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  users: any[] = [
-    {
-      id: 1,
-      name: 'admin',
-      username: 'admin',
-      password: 'pass',
-    },
+  authUsers: User[] = [
+    new User("admin", "admin", "admin@email.domain", true, "joined", new Date().getUTCDate(), "admin", "pass"),
   ];
 
   session: any;
@@ -24,7 +20,7 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    let user = this.users.find(
+    let user = this.authUsers.find(
       (u) => u.username === username && u.password === password
     );
     if (user) {

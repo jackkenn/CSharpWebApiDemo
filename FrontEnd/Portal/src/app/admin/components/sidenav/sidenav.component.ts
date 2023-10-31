@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../../auth.service';
+import { NavService } from '../../nav.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +8,14 @@ import { AuthService } from '../../../auth.service';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private navService: NavService) {}
 
   logout() {
     this.authService.logout();
+    this.navService.dashboardBannerTitle = "Home";
+  }
+
+  companySettigns() {
+    this.navService.nav("company-settings", "Company Settings");
   }
 }

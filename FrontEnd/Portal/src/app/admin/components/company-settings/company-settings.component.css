@@ -1,0 +1,15 @@
+.user-search-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 5px;
+}
+
+.user-search-fields > mat-form-field {
+    padding: 5px;
+    width: 100%;
+}
+
+mat-tab-group {
+    padding: 15px;
+}
