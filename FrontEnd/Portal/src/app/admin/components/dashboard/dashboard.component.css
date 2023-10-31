@@ -1,22 +1,12 @@
-.banner {
-    height: 8vh;
-    background-color: rgb(119, 38, 159);
-    padding: 10px;
-    align-items: center;
-    justify-content: left;
-    display: flex;
-}
-
-.banner-text {
-    color: aliceblue;
-    margin: 0;
-    font-size: 200%;
-}
-
 .main {
     width: 100%;
 }
 
 mat-drawer-container, mat-drawer-content {
     min-height: calc(100vh - 16px);
+}
+
+.button {
+    padding-right: 10px;
+    margin-right: 10px;
 }

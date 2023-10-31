@@ -5,12 +5,10 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class NavService {
-  dashboardBannerTitle: string = "Home";
   constructor(private router: Router) { }
 
   nav(url: string, dashboardBannerTitle: string) {
     this.router.navigateByUrl(url);
-    this.dashboardBannerTitle = dashboardBannerTitle;
     this.dashboardBannerEM.emit();
   }
 
