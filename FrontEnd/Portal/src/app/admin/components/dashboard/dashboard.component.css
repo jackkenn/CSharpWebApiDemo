@@ -3,14 +3,18 @@
     background-color: rgb(119, 38, 159);
     padding: 10px;
     align-items: center;
-    justify-content: left;
     display: flex;
 }
 
-.banner-text {
+.banner-title {
     color: aliceblue;
     margin: 0;
     font-size: 200%;
+    margin-right: auto;
+}
+
+.banner-buttons {
+    display: flex;
 }
 
 .main {
