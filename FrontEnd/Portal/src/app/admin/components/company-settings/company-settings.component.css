@@ -13,3 +13,26 @@
 mat-tab-group {
     padding: 15px;
 }
+
+.banner {
+    height: 8vh;
+    background-color: rgb(119, 38, 159);
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-title {
+    color: aliceblue;
+    margin: 0;
+    font-size: 200%;
+}
+
+.banner-buttons {
+    display: flex;
+}
+
+.banner-buttons > button {
+    margin-right: 10px;
+}

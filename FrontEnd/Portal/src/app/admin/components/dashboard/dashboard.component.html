@@ -4,13 +4,6 @@
     </mat-drawer>
     <mat-drawer-content>
         <div class="main">
-            <div class="banner">
-                <p class="banner-title">{{bannerTitle}}</p>  
-                
-                <div class="banner-buttons">
-                    <button *ngIf="bannerTitle ==='Company Settings'" mat-raised-button>+ NEW USER</button>
-                </div>
-            </div>
             <router-outlet></router-outlet>
         </div>
     </mat-drawer-content>

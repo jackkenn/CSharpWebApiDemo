@@ -12,7 +12,6 @@ export class SidenavComponent {
 
   logout() {
     this.authService.logout();
-    this.navService.dashboardBannerTitle = "Home";
   }
 
   companySettigns() {

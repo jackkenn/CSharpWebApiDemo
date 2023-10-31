@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavService } from '../../nav.service';
 
 @Component({
   selector: 'app-company-settings',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./company-settings.component.css']
 })
 export class CompanySettingsComponent {
-
+  constructor(private navService: NavService) {}
+  
+  newUserDetails() {
+    this.navService.nav("new-user", "New User");
+  }
 }
