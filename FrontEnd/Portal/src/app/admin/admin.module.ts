@@ -17,6 +17,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { NewUserDetailsComponent } from './components/new-user-details/new-user-details.component';
+import { MemberDetailsFormComponent } from './components/member-details-form/member-details-form.component';
+import { NewRequestComponent } from './components/new-request/new-request.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +32,8 @@ import { NewUserDetailsComponent } from './components/new-user-details/new-user-
     CompanySettingsComponent,
     UserTableComponent,
     NewUserDetailsComponent,
+    MemberDetailsFormComponent,
+    NewRequestComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +48,9 @@ import { NewUserDetailsComponent } from './components/new-user-details/new-user-
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 })
 export class AdminModule {}

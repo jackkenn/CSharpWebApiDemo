@@ -10,6 +10,6 @@ export class CompanySettingsComponent {
   constructor(private navService: NavService) {}
   
   newUserDetails() {
-    this.navService.nav("new-user", "New User");
+    this.navService.nav("new-user");
   }
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CompanySettingsComponent } from './components/company-settings/company-settings.component';
 import { NewUserDetailsComponent } from './components/new-user-details/new-user-details.component';
+import { NewRequestComponent } from './components/new-request/new-request.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'new-user',
         component: NewUserDetailsComponent,
+      },
+      {
+        path: 'new-request',
+        component: NewRequestComponent,
       }
     ],
   },
