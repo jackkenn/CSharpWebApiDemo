@@ -7,7 +7,7 @@ import { User } from '../user/User';
 })
 export class AuthService {
   authUsers: User[] = [
-    new User("admin", "admin", "admin@email.domain", true, "joined", new Date().getUTCDate(), "admin", "pass"),
+    new User(1, "admin", "admin", "admin@email.domain", true, "joined", new Date().getUTCDate(), "admin", "pass"),
   ];
 
   session: any;
