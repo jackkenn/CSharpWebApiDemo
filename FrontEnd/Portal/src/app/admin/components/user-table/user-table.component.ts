@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { User } from '../../../User';
+import { User } from '../../../services/user/User';
 
 const USER_DATA: User[] = [
   new User(
