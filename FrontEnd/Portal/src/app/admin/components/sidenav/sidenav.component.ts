@@ -15,6 +15,10 @@ export class SidenavComponent {
   }
 
   companySettigns() {
-    this.navService.nav("company-settings", "Company Settings");
+    this.navService.nav("company-settings");
+  }
+
+  newRequest() {
+    this.navService.nav("new-request");
   }
 }

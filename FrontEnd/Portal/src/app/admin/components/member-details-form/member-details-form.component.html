@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Enter Member Details</mat-card-title>
+    <mat-card-content>
+        <p>Please enter member dtails below. These details will be used to preform eligibility check. Details marked
+            with * are required to complete this step.</p>
+        <form [formGroup]="eligibilityCheck">
+            <div class="user-fields">
+                <mat-form-field>
+                    <mat-label>Agency *</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Member ID *</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Case Manager *</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Referral Source *</mat-label>
+                    <mat-select>
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button matStepperNext color="primary">Find Member</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

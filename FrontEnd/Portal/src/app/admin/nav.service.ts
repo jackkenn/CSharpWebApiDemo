@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export class NavService {
   constructor(private router: Router) { }
 
-  nav(url: string, dashboardBannerTitle: string) {
+  nav(url: string) {
     this.router.navigateByUrl(url);
     this.dashboardBannerEM.emit();
   }
