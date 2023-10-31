@@ -1,13 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CompanySettingsComponent } from './components/company-settings/company-settings.component';
 
 const routes: Routes = [
-  { path: '', component: SidenavComponent },
+  {
+    path: '',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'company-settings',
+        component: CompanySettingsComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

@@ -1,3 +1,13 @@
-<div class="banner">
-    <p class="banner-text">dashboard works!</p>
-</div>
+<mat-drawer-container>
+    <mat-drawer mode="side" opened>
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="main">
+            <div class="banner">
+                <p class="banner-text">{{bannerTitle}}</p>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

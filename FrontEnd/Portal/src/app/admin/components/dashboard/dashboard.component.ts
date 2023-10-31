@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavService } from '../../nav.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  @Input() bannerTitle: string = this.navService.dashboardBannerTitle;
+
+  constructor(private navService: NavService) {}
+
+  ngOnInit() {
+    this.navService.dashboardBannerEM.subscribe(() => this.bannerTitle = this.navService.dashboardBannerTitle);
+  }
 }

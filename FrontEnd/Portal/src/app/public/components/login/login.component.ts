@@ -1,6 +1,6 @@
 import { Input, Component, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from '../../../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +17,8 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.submitEM.subscribe((x: { username: string, password: string }) => {
-      if(this.authservice.login(x.username, x.password)) {
-        console.log("logged in");
-      } else {
-        console.log("invalid login");
+      if(!this.authservice.login(x.username, x.password))
         this.error += "invalid login";
-      }
     });
   }
 

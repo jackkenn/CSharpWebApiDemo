@@ -1,22 +1,14 @@
-<mat-drawer-container>
-    <mat-drawer mode="side" opened>
-        <div class="sidenav-wrapper">
-            <div class="sidenav">
-                <p>Logo</p>
-            </div>
-            <div class="sidenav-element"><button class="button" mat-button>+ New Request</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>Requests</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>Agencies</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>Case Managers</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>User?</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>Company Settings</button></div>
-            <div class="sidenav-element"><button class="button" mat-button>Protal FAQs</button></div>
-            <div class="sidenav-element"><button class="button" (click)="logout()" mat-button>Logout</button></div>
-        </div>
-    </mat-drawer>
-    <mat-drawer-content>
-        <div class="main-content">
-            <app-dashboard></app-dashboard>
-        </div>
-    </mat-drawer-content>
-</mat-drawer-container>
+<div class="sidenav-wrapper">
+    <div class="sidenav-element">
+        <p>Logo</p>
+    </div>
+    <div class="sidenav-element"><button mat-button color="primary">+ New Request</button></div>
+    <div class="sidenav-element"><button mat-button color="primary">Requests</button></div>
+    <div class="sidenav-element"><button mat-button color="primary">Agencies</button></div>
+    <div class="sidenav-element"><button mat-button color="primary">Case Managers</button></div>
+    <div class="sidenav-element"><button mat-button color="primary">User?</button></div>
+    <div class="sidenav-element"><button (click)='companySettigns()' mat-button color="primary">Company
+            Settings</button></div>
+    <div class="sidenav-element"><button mat-button color="primary">Protal FAQs</button></div>
+    <div class="sidenav-element"><button (click)="logout()" mat-button color="primary">Logout</button></div>
+</div>

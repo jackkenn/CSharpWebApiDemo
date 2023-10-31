@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-tab-group>
+        <mat-tab label="Users">
+            <div class="user-search-fields">
+                <mat-form-field>
+                    <mat-label>Search Users</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>All Statuses</mat-label>
+                    <mat-select>
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>All Roles</mat-label>
+                    <mat-select>
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <app-user-table></app-user-table>
+        </mat-tab>
+        <mat-tab label="Meal Plans"> Content 2 </mat-tab>
+    </mat-tab-group>
+</mat-card>
