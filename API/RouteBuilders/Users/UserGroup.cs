@@ -6,9 +6,9 @@ namespace API.RouteBuilders.Users;
 
 public static class UserGroup {
     public static RouteGroupBuilder  MapUserGroup(this RouteGroupBuilder group) {
-        group.MapGet("/", GetAllUsers);
-        group.MapPost("/", CreateUser);
-        group.MapGet("/{id}", GetUser);
+        group.MapGet("/", GetAllUsers).WithOpenApi();
+        group.MapPost("/", CreateUser).WithOpenApi();
+        group.MapGet("/{id}", GetUser).WithOpenApi();
 
         return group;
     }
@@ -28,7 +28,7 @@ public static class UserGroup {
             Email = userDto.Email,
             FirstName = userDto.FirstName,
             LastName = userDto.LastName,
-            role = userDto.role
+            Role = userDto.Role
         };
 
         await userService.Add(user);
