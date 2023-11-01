@@ -28,7 +28,10 @@ public static class UserGroup {
             Email = userDto.Email,
             FirstName = userDto.FirstName,
             LastName = userDto.LastName,
-            Role = userDto.Role
+            Role = userDto.Role,
+            PortalAccess = userDto.PortalAccess,
+            InvitedStatus = userDto.InvitedStatus,
+            LastLogin = userDto.LastLogin
         };
 
         await userService.Add(user);

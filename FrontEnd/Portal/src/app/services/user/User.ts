@@ -1,7 +1,8 @@
 export class User {
   constructor(
     public id: undefined | number = 0,
-    public name: undefined | string = '',
+    public firstName: undefined | string = '',
+    public lastName: undefined | string = '',
     public role: undefined | string = '',
     public email: undefined | string = '',
     public portalAccess: undefined | boolean = false,

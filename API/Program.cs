@@ -15,6 +15,8 @@ builder.Services.AddDbContext<PortalDbContext>(options =>
     options.UseSqlite($"Data Source={Path.Join(path, "WebMinRouteGroup.db")}");
 });
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -23,13 +25,20 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => origin == "http://localhost:4200")
+    .AllowCredentials());
+
+// app.UseAuthentication();
+// app.UseAuthorization();
+
 using var scope = app.Services.CreateScope();
 var db = scope.ServiceProvider.GetService<PortalDbContext>();
 db?.Database.MigrateAsync();
 
 app.MapGroup("/user").MapUserGroup().WithTags("User Endpoints");
-
-app.MapGet("/", () => "Hello World!");
 
 app.Run();
 

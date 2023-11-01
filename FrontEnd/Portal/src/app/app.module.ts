@@ -7,8 +7,7 @@ import { PublicModule } from './public/public.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { UserInMemService } from './services/user/user-in-mem.service';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -16,11 +15,11 @@ import { UserInMemService } from './services/user/user-in-mem.service';
     PageNotFoundComponent,
   ],
   imports: [
+    BrowserModule,
     AppRoutingModule,
     PublicModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(UserInMemService),
   ],
   providers: [],
   bootstrap: [AppComponent]
