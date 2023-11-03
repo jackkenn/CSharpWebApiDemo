@@ -47,3 +47,10 @@ mat-card-content {
 mat-card-title {
     color: rgb(119, 38, 159);
 }
+
+.error {
+    padding: 16px;
+    width: 100%;
+    color: white;
+    background-color: red;
+}

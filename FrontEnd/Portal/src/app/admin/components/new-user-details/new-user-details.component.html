@@ -2,41 +2,43 @@
     <p class="banner-title">New User</p>
 
     <div class="banner-buttons">
-        <button mat-raised-button>+ INVITE USER</button>
-        <div> </div>
+        <button type="submit" mat-raised-button (click)='submit()'>+ INVITE USER</button>
         <button mat-raised-button>X CANCEL</button>
     </div>
 </div>
 <mat-card>
     <mat-card-title>User Details</mat-card-title>
     <mat-card-content>
-        <div class="user-fields">
+        <form [formGroup]="form" (ngSubmit)="submit()" class="user-fields">
+            <p *ngIf="error" class="error">
+                {{ error }}
+            </p>
             <mat-form-field>
                 <mat-label>First Name</mat-label>
-                <input matInput>
+                <input matInput formControlName='firstName'>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Last Name</mat-label>
-                <input matInput>
+                <input matInput formControlName='lastName'>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Role</mat-label>
-                <mat-select>
+                <mat-select formControlName='role'>
                     <mat-option value="one">First option</mat-option>
                     <mat-option value="two">Second option</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Email</mat-label>
-                <input matInput>
+                <input type='Email' matInput formControlName='email'>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Login Method</mat-label>
-                <mat-select>
+                <mat-select formControlName='loginMethod'>
                     <mat-option value="one">First option</mat-option>
                     <mat-option value="two">Second option</mat-option>
                 </mat-select>
             </mat-form-field>
-        </div>
+        </form>
     </mat-card-content>
 </mat-card>
