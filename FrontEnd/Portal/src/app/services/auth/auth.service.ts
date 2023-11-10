@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from './User';
+import { User } from '../user/User';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   authUsers: User[] = [
-    new User("admin", "admin", "admin@email.domain", true, "joined", new Date().getUTCDate(), "admin", "pass"),
+    new User(1, "admin", "admin", "admin", "admin@email.domain", true, "joined", new Date().getUTCDate(), "admin", "pass"),
   ];
 
   session: any;

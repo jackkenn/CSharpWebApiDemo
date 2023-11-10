@@ -1,26 +1,6 @@
-import { Component } from '@angular/core';
-import { User } from '../../../User';
-
-const USER_DATA: User[] = [
-  new User(
-    'admin',
-    'admin',
-    'admin@email.domain',
-    true,
-    'joined',
-    new Date().getUTCDate(),
-    'admin'
-  ),
-  new User(
-    'user',
-    'user',
-    'user@email.domain',
-    false,
-    'joined',
-    new Date().getUTCDate(),
-    'user'
-  ),
-];
+import { Component, Input } from '@angular/core';
+import { User } from '../../../services/user/User';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-user-table',
@@ -28,6 +8,7 @@ const USER_DATA: User[] = [
   styleUrls: ['./user-table.component.css'],
 })
 export class UserTableComponent {
+  constructor(private userService: UserService) {}
   displayedColumns: string[] = [
     'name',
     'role',
@@ -36,5 +17,10 @@ export class UserTableComponent {
     'invitedStatus',
     'lastLogin',
   ];
-  dataSource = USER_DATA;
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe((data) => (this.dataSource = data));
+  }
+
+  @Input() dataSource!: User[];
 }
